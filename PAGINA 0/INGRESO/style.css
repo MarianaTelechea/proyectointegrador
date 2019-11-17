@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0 auto;
+  background-image: url(FONDO.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+li.logo {
+  background-image: url(logo.png);
+}
+
+img {
+  width: 20%;
+  margin-top: 10px;
+}
+
+header {
+  background-color: rgba(91, 91, 93, 0.67);
+}
+
+.fondonegro {
+  width: 34%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-self: center;
+  height: 31em;
+  top: 16em;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.iniciar{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 15%;
+  width: 66%;
+  font-family: PT Sans Narrow;
+
+}
+
+h1 {
+  color: white;
+}
+
+.login-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 17em;
+  width: 100%;
+  font-family: PT Sans Narrow;
+}
+
+input {
+  padding: 4%;
+background-color: #ffffff85;
+border: 0;
+color: white;
+border-radius: 10px;
+}
+
+button {
+  background-color: #ffac03;
+    border: 0;
+    border-radius: 30px;
+    height: 46px;
+    color: white;
+font-size: 16px;
+font-family: PT Sans Narrow;
+}
+
+p {
+  color: white;
+  font-family: PT Sans Narrow;
+}
