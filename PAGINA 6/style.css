@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Questrial;
+  font-size: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* // EL BOTON // */
+
+form.buscador {
+  position: relative;
+}
+
+form.buscador input.texto{
+  width: 11%;
+    height: 2em;
+    border: 0;
+    border-bottom: 1px solid #aba9a9;
+    position: absolute;
+top: -11em;
+right: 3em;
+text-align: center;
+font-family: PT Sans Narrow;
+}
+
+form input.boton {
+  position: absolute;
+    top: -11em;
+    right: 3em;
+}
+
+/* -------- NAVEGADOR -------- */
+
+
+.ul-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.li-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.li-logo a {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+  width: 28%;
+  margin-bottom: 9px;
+  margin-top: 10px;
+}
+
+.ul-menu {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 46%;
+    position: relative;
+    left: 27%;
+}
+
+.li-menu {
+  list-style-type: none;
+  font-size: 31px;
+  font-family: PT Sans Narrow;
+}
+
+.li-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.li-menu a:hover {
+  color: #ffac03;
+  font-size: 1.3em;
+}
+
+.post-footer label:hover {
+  color: #ffac03;
+  font-size: 2.4em;
+}
+
+.post-footer label {
+  width: 100%;
+ font-size: 2em;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* -------- BUSCADOR AVANZADO --------- */
+.busc-avanzado {
+  margin-top: 15px;
+  padding: 17%;
+  background-color: #ffae05a6;
+  display: flex;
+  flex-wrap: wrap;
+      justify-content: center;
+}
+
+.busc-avanzado img {
+  width: 42%;
+position: relative;
+top: -8em;
+left: -2em;
+}
+
+label.buscar{
+
+  text-align: center;
+}
+
+label.excluir{
+
+  text-align: center;
+}
+
+form.buscador{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  top: -4em;
+font-size: 2em;
+font-family: PT Sans Narrow;
+}
+
+form div{
+  display: flex;
+flex-direction: column;
+width: 100%;
+align-items: center;
+}
+
+form div button {
+  width: 33%;
+    height: 3em;
+    border-radius: 5em;
+    color: white;
+    background-color: black;
+    border: 0;
+    margin-top: 22px;
+    font-family: PT Sans Narrow;
+    font-size: 15px;
+}
+
+form div button:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+
+}
+
+label.orden{
+
+  text-align: center;
+}
+
+label.año{
+
+  text-align: center;
+}
+
+div.titulo{
+  display: flex;
+width: 100%;
+font-family: PT Sans Narrow;
+}
+
+.titulo p{
+  height: 1em;
+font-size: 4em;
+}
+
+.titulo p:hover{
+  background-color: white;
+height: 1.2em;
+}
+/* -------- FOOTER --------- */
+
+
+footer {
+  border-radius: 58%;
+  margin-top: 1%;
+  background-color: #ffffff;
+}
+
+
+footer img {
+  width: 26%;
+    position: relative;
+    left: 38%;
+    margin-top: 18px;
+}
+
+footer h3 {
+  font-family: PT Sans Narrow;
+  text-align: center;
+}
+
+
+.lista {
+      display: flex;
+      justify-content: center;
+}
+
+.lista li img {
+  width: 20%;
+}
+
+.lista li {
+  list-style: none;
+  width: 24%;
+}
+
+.ul-footer{
+  border-top: 1px solid gainsboro;
+    margin-top: 26px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.ul-footer ul{
+  display: flex;
+list-style: none;
+justify-content: center;
+margin: 27px;
+}
+
+.ul-footer ul li{
+  padding-right: 22px;
+border-right: 1px solid black;
+padding-left: 27px;
+}
+
+.ul-footer ul li.primero{
+  border-left: 1px solid black;
+}
+
+.post-footer {
+  background-color: #000000eb;
+    margin-top: 20px;
+    display: flex;
+}
+
+.post-footer img{
+  width: 13%;
+    padding: 9px;
+}
+
+.nombres {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: white;
+font-size: 10px;
+justify-content: center;
+margin-left: 32%;
+
+}
+
+.nombres label {
+  font-family: PT Sans Narrow;
+}
