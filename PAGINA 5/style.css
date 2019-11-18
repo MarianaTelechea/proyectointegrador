@@ -143,6 +143,7 @@ button {
   font-family: "PT Sans Narrow";
   font-size: 18px;
 
+
   }
 
   button:hover {
@@ -217,6 +218,8 @@ button {
   border: dotted;
   padding: 7px;
   font-size: 17px;
+  background: #feae0424;
+  -webkit-text-stroke: medium;
 }
 
 /*Los botones de la serie*/
@@ -247,6 +250,7 @@ align-items: center;
   color: white;
   border-radius: 9px;
   height: 2em;
+  background: #82828257;
 }
 
 #detalle-serie a:hover{

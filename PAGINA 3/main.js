@@ -75,7 +75,7 @@ console.log("Error: " + error);
         var arrayDeSeries = informacion.results
         console.log(arrayDeSeries);
 
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < informacion.results.length; i++) {
 
           var id = arrayDeSeries[i].id
           var imagenSerie= arrayDeSeries[i].poster_path
