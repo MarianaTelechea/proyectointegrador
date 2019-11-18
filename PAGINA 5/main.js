@@ -32,7 +32,7 @@ window.onload = function() {
 
         li += '<li>'
         li += '<h2>' + title + '</h2>'
-        li += '<img src="' + imgPath + imagenSerie + '">'
+        li += '<img src="' + imgPath + imagenSerie + '" >'
 
         li += '<h4>' + sinopsis + '</h4>'
         li += '<h4>' + "Fecha de estreno: " + fechaEstreno + '</h4>'
@@ -62,7 +62,6 @@ window.onload = function() {
         document.querySelector("#detalle-serie").style.backgroundSize = "cover";
         document.querySelector("#detalle-serie").style.maxHeight = "174vh";
         document.querySelector("#detalle-serie").style.minHeight = "174vh";
-
 
 
 

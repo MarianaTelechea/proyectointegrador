@@ -12,15 +12,16 @@ window.onload = function() {
     titulo.innerText += resultado;
     var contenedorSeries = document.querySelector(".resultado-series");
     for(var i = 0; i < data.results.length; i++) {
+
       contenedorSeries.innerHTML +=`
       <li>
-        <a href='../PAGINA 5/descripcion.html?id= ${data.results[i].id}' >
-          <img src='https://image.tmdb.org/t/p/original/${data.results[i].poster_path}'>
+      <a href='../PAGINA 5/descripcion.html?id= ${data.results[i].id}' >
+        <img src='https://image.tmdb.org/t/p/original/${data.results[i].poster_path}' onError="this.src='Error404.png'">
         </a>
-      </li>
-      `
-
+        </li>
+        `
     }
+
 
   })
   .catch(function(error) {

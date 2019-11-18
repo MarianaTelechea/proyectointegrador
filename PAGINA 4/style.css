@@ -112,7 +112,7 @@ label {
 }
 
 .resultado-busc {
-  background-color: #ffae05a6;
+  background-color: #0000005c;
     height: 100%;
     text-align: center;
     position: relative;
@@ -157,7 +157,8 @@ display: flex;
 
 .resultado-series img:hover {
 border: 3px solid white;
-opacity: 50%;
+border: 14px solid white;
+    mix-blend-mode: soft-light;
 }
 
 .resultado-series li{
