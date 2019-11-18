@@ -60,8 +60,8 @@ window.onload = function() {
         document.querySelector("#detalle-serie").style.backgroundImage='url(' + imgPath + imagen + '),'+some_fancy_gradient+'';
         document.querySelector("#detalle-serie").style.backgroundRepeat = "no-repeat";
         document.querySelector("#detalle-serie").style.backgroundSize = "cover";
-        document.querySelector("#detalle-serie").style.maxHeight = "174vh";
-        document.querySelector("#detalle-serie").style.minHeight = "174vh";
+        document.querySelector("#detalle-serie").style.maxHeight = "200vh";
+        document.querySelector("#detalle-serie").style.minHeight = "200vh";
 
 
 

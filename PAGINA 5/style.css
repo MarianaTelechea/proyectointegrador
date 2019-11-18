@@ -219,7 +219,7 @@ button {
   padding: 7px;
   font-size: 17px;
   background: #feae0424;
-  -webkit-text-stroke: medium;
+
 }
 
 /*Los botones de la serie*/
@@ -260,7 +260,8 @@ align-items: center;
 #detalle-serie:before{
   content: "";
   width: 100%;
-  min-height: 174vh;
+  min-height: 200vh;
+  max-height: 200vh;
   position: absolute;
   top: 10.5em;
   left:0;
