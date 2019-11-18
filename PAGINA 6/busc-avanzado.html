@@ -32,39 +32,57 @@
       </div>
     </header>
 
-    <section class="busc-avanzado">
-      <div class="titulo">
-      <img src="busca-pop.png" alt="popcorn">
-      <p>BUSCADOR AVANZADO</p>
-    </div>
-      <form class="buscador" action="index.html" method="post">
-        <div>
-          <label for="name" class="buscar">
+    <section class="busc-avanzado2">
+      <div class="busc-avanzado">
+
+          <div class="titulo">
+            <img src="busca-pop.png" alt="popcorn">
+            <p>BUSCADOR AVANZADO</p>
+          </div>
+          <form class="busc" action="index.html" method="post">
+            <div class="avanzaso">
+              <label for="name" class="buscar">
             GÉNERO QUE DESEA BUSCAR
-              <select id="selectGenre" class="buscar" name="buscados" >
+                  <select id="selectGenre" class="buscar" name="buscados" >
 
-              </select>
-          </label>
-          <label for="name" class="excluir">
-            GÉNERO QUE DESEA EXCLUIR
-            <select class="excluir" name="excluidos" id="excludeGenre" >
+                  </select>
+                </label>
+                <label for="name" class="excluir">
+                  GÉNERO QUE DESEA EXCLUIR
+                  <select class="excluir" name="excluidos" id="excludeGenre" >
 
-            </select>
-          </label>
-          <label for="name" class="orden">
-            ÓRDEN DE LOS RESULTADOS
-            <select class="orden" name="excluidos">
-                <option value=""></option>
-            </select>
-          </label>
-          <label for="name" class="año">
-            AÑO DE ESTRENO
-              <input type="date" name="date" value="">
-          </label>
-          </label>
-          <button type="search" name="button">S E A R C H</button>
+                  </select>
+                </label>
+                <label for="name" class="orden">
+                  ÓRDEN DE LOS RESULTADOS
+                  <select class="orden" name="orden">
+                    <option value="">Popularidad Ascendente</option>
+                    <option value="">Popularidad Descendente</option>
+                    <option value="">Rating Ascendente</option>
+                    <option value="">Rating Descendente</option>
+                    <option value="">Año Ascendente</option>
+                    <option value="">Año Descendente</option>
+                  </select>
+                </label>
+                <label for="name" class="año">
+                  AÑO DE ESTRENO
+                  <input type="date" class="year" name="year" id="year">
+
+                </input>
+                </label>
+              </label>
+              <button type="search" name="button">S E A R C H</button>
+            </div>
+          </form>
+
         </div>
-      </form>
+
+    </section>
+
+
+
+    <section class="resultado">
+
     </section>
 
 

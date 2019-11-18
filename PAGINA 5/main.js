@@ -105,6 +105,20 @@ fetch("https://api.themoviedb.org/3/tv/" + idRecom +"/similar?api_key=65eadee9d6
           console.log(series);
           var arrayDeSeries = series.results
             for (var i=0; i < arrayDeSeries.length; i++){
-              document.querySelector('#recomendaciones').innerHTML += "<li><a href='../PAGINA 5/descripcion.html?id=" + series.results[i].id + "'><img src='https://image.tmdb.org/t/p/original" + series.results[i].backdrop_path + "'></a></li>"
+              document.querySelector('#recomendaciones').innerHTML += `
+
+              <li>
+                <a href='../PAGINA 5/descripcion.html?id=${series.results[i].id}'>
+                  <img src='https://image.tmdb.org/t/p/original/${series.results[i].backdrop_path}' onError="this.src='Error2.png'">
+                </a>
+              </li>
+
+              `
+
              }
         })
+
+
+
+
+        // "<li><a href='../PAGINA 5/descripcion.html?id=" + series.results[i].id + "'><img src='https://image.tmdb.org/t/p/original" + series.results[i].backdrop_path + "'></a></li>"
