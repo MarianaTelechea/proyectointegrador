@@ -1,0 +1,48 @@
+html{
+  cursor: url(../Resources/giphy.gif),default;
+}
+body{
+  cursor: url(../Resources/giphy.gif),default;
+  background-image: url("../Resources/Fondo.png");
+  background-size: cover;
+}
+.tmdblogo{
+  width: 5%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.nombres{
+  position: absolute;
+bottom: 0px;
+right: 70px;
+font-size: x-small;
+color: white;
+}
+.integrantes{
+  text-decoration: underline;
+  position: absolute;
+bottom: 30px;
+font-size: x-small;
+right: 190px;
+color: white;
+}
+.nav-brand{
+  width: 200px;
+margin-right: 0px;
+height: 90px;
+padding-top: 0px;
+padding-bottom: 0px;
+}
+.loguito{
+  width: 100%;
+}
+#navbar{
+padding-bottom: 0px;
+padding-top: 0px;
+}
+
+.navbar-brand{
+  width: 111px;
+margin-right: 17px;
+}
