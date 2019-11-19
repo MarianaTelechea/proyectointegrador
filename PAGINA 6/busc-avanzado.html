@@ -39,29 +39,29 @@
             <img src="busca-pop.png" alt="popcorn">
             <p>BUSCADOR AVANZADO</p>
           </div>
-          <form class="busc" action="index.html" method="post">
+          <form class="busc" action="busc-avanzado.html" method="GET">
             <div class="avanzaso">
               <label for="name" class="buscar">
             GÉNERO QUE DESEA BUSCAR
                   <select id="selectGenre" class="buscar" name="buscados" >
-
+                    <option value=""></option>
                   </select>
                 </label>
                 <label for="name" class="excluir">
                   GÉNERO QUE DESEA EXCLUIR
                   <select class="excluir" name="excluidos" id="excludeGenre" >
-
+                    <option value=""></option>
                   </select>
                 </label>
                 <label for="name" class="orden">
                   ÓRDEN DE LOS RESULTADOS
                   <select class="orden" name="orden">
-                    <option value="">Popularidad Ascendente</option>
-                    <option value="">Popularidad Descendente</option>
-                    <option value="">Rating Ascendente</option>
-                    <option value="">Rating Descendente</option>
-                    <option value="">Año Ascendente</option>
-                    <option value="">Año Descendente</option>
+                    <option value="vote_average.desc">Puntuación descendente</option>
+                    <option value="vote_average.asc">Puntuación ascendente </option>
+                    <option value="first_air_date.desc">Fecha de estreno descendente</option>
+                    <option value="first_air_date.asc">Fecha de estreno ascendente</option>
+                    <option value="popularity.desc">Popilaridad descendente</option>
+                    <option value="popularity.asc">Popularidad ascendente</option>
                   </select>
                 </label>
                 <label for="name" class="año">
@@ -71,7 +71,7 @@
                 </input>
                 </label>
               </label>
-              <button type="search" name="button">S E A R C H</button>
+              <button type="submit" name="button">S E A R C H</button>
             </div>
           </form>
 
@@ -82,6 +82,7 @@
 
 
     <section class="resultado">
+      
 
     </section>
 

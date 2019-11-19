@@ -13,7 +13,7 @@ window.onload = function() {
     for (var i = 0; i < popu.genres.length; i++) {
        document.querySelector(".lista").innerHTML += `
         <li>
-          <a href="../PAGINA 3/lista-generos.html?id=${popu.genres[i].id}">
+          <a href="../PAGINA 3/lista-generos.html?id=${popu.genres[i].id}&nombreDeGenero=${popu.genres[i].name}">
             ${popu.genres[i].name}
           </a>
         </li>

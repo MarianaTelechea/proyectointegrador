@@ -15,46 +15,47 @@ window.addEventListener("load", function() {
   var objeto_search = new URLSearchParams(window.location.search)
 
   var idSerie = objeto_search.get("id")
+  var nombreDeGenero = objeto_search.get("nombreDeGenero")
 
   console.log(idSerie);
-
-fetch("https://api.themoviedb.org/3/tv/" + idSerie + "?api_key=65eadee9d6749b2ab92f01099d10deeb&language=es-ARG")
-    .then(function(respuesta) {
-      return respuesta.json()
-})
-    .then(function(generos) {
-console.log(generos)
-
-var serie = generos
-
-   var id = serie.id
-   var arrayDeGeneros = serie.genres
-
-var h1 = ''
-
- h1 += '<h1>'
-
-
- for (var i=0; i < arrayDeGeneros.length; i++){
-
-       h1 += arrayDeGeneros[i].name
-
-       if (i < arrayDeGeneros) {
-         h1 += ' - '
-       }
- }
- h1 += '</h1>'
-
-
- console.log(h1);
- document.querySelector('.titulo').innerText = h1
-
-
-})
-
-    .catch(function(error) {
-console.log("Error: " + error);
-})
+document.querySelector('.titulo').innerText = nombreDeGenero;
+// fetch("https://api.themoviedb.org/3/tv/" + idSerie + "?api_key=65eadee9d6749b2ab92f01099d10deeb&language=es-ARG")
+//     .then(function(respuesta) {
+//       return respuesta.json()
+// })
+//     .then(function(generos) {
+// console.log(generos)
+//
+// var serie = generos
+//
+//    var id = serie.id
+//    var arrayDeGeneros = serie.genres
+//
+// var h1 = ''
+//
+//  h1 += '<h1>'
+//
+//
+//  for (var i=0; i < arrayDeGeneros.length; i++){
+//
+//        h1 += arrayDeGeneros[i].name
+//
+//        if (i < arrayDeGeneros) {
+//          h1 += ' - '
+//        }
+//  }
+//  h1 += '</h1>'
+//
+//
+//  console.log(h1);
+//  document.querySelector('.titulo').innerText = h1
+//
+//
+// })
+//
+//     .catch(function(error) {
+// console.log("Error: " + error);
+// })
 
 
 

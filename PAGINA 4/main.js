@@ -20,12 +20,29 @@ window.onload = function() {
         </a>
         </li>
         `
-    }
+      }
 
+      // capturo el boton
+      document.querySelector("BOTON").addEventListener('click', function(event){
+        // al boton le agrego el evento para que cuando lo clickee, ejecute una funcion que tenga el codigo que esta debajo
+        var buscadorInput = document.querySelector("input.buscador-simple")
+        console.log(buscadorInput);
+        if (buscadorInput.value.length < 3) {
+          console.log("entro al if");
+          event.preventDefault()
+          document.querySelector(".alert-light").style.display = "block"
+          setTimeout(function() {
+            document.querySelector(".alert-light").style.display = "none"
+          },3000)
+
+
+        }
+
+      })
 
   })
   .catch(function(error) {
         console.log("Error: " + error);
 
-      })
+  })
 }
