@@ -1,5 +1,26 @@
 window.onload = function() {
-  console.log("works");
+
+
+  document.querySelector(".busc").onsubmit = function(e) {
+
+
+
+    var campoBuscar = document.querySelector(".buscarCampo");
+    console.log(campoBuscar);
+    var generoBuscado = campoBuscar.options[campoBuscar.selectedIndex].value;
+
+    //document.querySelector("input").value
+
+    if (generoBuscado == "") {
+      e.preventDefault();
+      UIkit.notification({
+          message: 'my-message!',
+          status: 'primary',
+          pos: 'top-right',
+          timeout: 5000
+      });
+    }
+  }
 
 // API PARA LOS GENEROS //
 
@@ -32,7 +53,7 @@ var notGenres = new URLSearchParams(location.search).get("excluidos");
 var orden = new URLSearchParams(location.search).get("orden") ;
 var year = new URLSearchParams(location.search).get("year");
 
-console.log("https://api.themoviedb.org/3/discover/tv?api_key=65eadee9d6749b2ab92f01099d10deeb&language=en-US&sort_by=" + orden + "&first_air_date_year=" + year + "&page=1&timezone=America%2FNew_York&with_genres=" + withGenres + "&without_genres=" + notGenres + "&include_null_first_air_dates=false");
+
 
   fetch("https://api.themoviedb.org/3/discover/tv?api_key=65eadee9d6749b2ab92f01099d10deeb&language=en-US&sort_by=" + orden + "&first_air_date_year=" + year + "&page=1&timezone=America%2FNew_York&with_genres=" + withGenres + "&without_genres=" + notGenres + "&include_null_first_air_dates=false")
   .then(function(response) {

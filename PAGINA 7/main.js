@@ -18,8 +18,9 @@ window.onload = function() {
       .then(function(response) {
         return response.json();
       })
-      .then(function(series) {
-        document.querySelector("ul").innerHTML += "<li><h3><a href=detallegif.html?idGif=" + serie.data.id + ">" + serie.data.title + "</a></h3><img src=" + serie.data.images.original.url + "></li>";
+      .then(function(serie) {
+        console.log(serie);
+        document.querySelector("ul").innerHTML += "<li><h3><a href=detallegif.html?idGif=" + serie.id + ">" + serie.name + "</a></h3><img src=" + serie.backdrop_path + "></li>";
       })
   }
 }

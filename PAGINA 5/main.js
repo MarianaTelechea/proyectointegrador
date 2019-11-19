@@ -32,7 +32,7 @@ window.onload = function() {
 
         li += '<li>'
         li += '<h2>' + title + '</h2>'
-        li += '<img src="' + imgPath + imagenSerie + '" >'
+        li += '<img src="' + imgPath + imagenSerie +  `" onError="this.src='Error404.png'">`
 
         li += '<h4>' + sinopsis + '</h4>'
         li += '<h4>' + "Fecha de estreno: " + fechaEstreno + '</h4>'
@@ -86,94 +86,83 @@ fetch("https://api.themoviedb.org/3/tv/" + idTrailer + "/videos?api_key=65eadee9
     document.querySelector("#video").src += KEY;
   })
 
-}
+  // API DE LAS recomendaciones
 
+  var objeto_search = new URLSearchParams(window.location.search)
+  // del objeto search guardo el dato que viene en el campo "id"
+  var idRecom = objeto_search.get("id")
+  // verificao que tiene el campo.
+  console.log(idRecom);
 
-// API DE LAS recomendaciones
+  fetch("https://api.themoviedb.org/3/tv/" + idRecom +"/similar?api_key=65eadee9d6749b2ab92f01099d10deeb&page=1")
+          .then(function(respuesta){
+            return respuesta.json()
+          })
+          .then(function(series){
+            console.log(series);
+            var arrayDeSeries = series.results
+              for (var i=0; i < arrayDeSeries.length; i++){
+                document.querySelector('#recomendaciones').innerHTML += `
 
-var objeto_search = new URLSearchParams(window.location.search)
-// del objeto search guardo el dato que viene en el campo "id"
-var idRecom = objeto_search.get("id")
-// verificao que tiene el campo.
-console.log(idRecom);
+                <li>
+                  <a href='../PAGINA 5/descripcion.html?id=${series.results[i].id}'>
+                    <img src='https://image.tmdb.org/t/p/original/${series.results[i].backdrop_path}' onError="this.src='Error2.png'">
+                  </a>
+                </li>
 
-fetch("https://api.themoviedb.org/3/tv/" + idRecom +"/similar?api_key=65eadee9d6749b2ab92f01099d10deeb&page=1")
-        .then(function(respuesta){
-          return respuesta.json()
-        })
-        .then(function(series){
-          console.log(series);
-          var arrayDeSeries = series.results
-            for (var i=0; i < arrayDeSeries.length; i++){
-              document.querySelector('#recomendaciones').innerHTML += `
+                `
 
-              <li>
-                <a href='../PAGINA 5/descripcion.html?id=${series.results[i].id}'>
-                  <img src='https://image.tmdb.org/t/p/original/${series.results[i].backdrop_path}' onError="this.src='Error2.png'">
-                </a>
-              </li>
+               }
+          })
 
-              `
-
-             }
-        })
-
-    // "<li><a href='../PAGINA 5/descripcion.html?id=" + series.results[i].id + "'><img src='https://image.tmdb.org/t/p/original" + series.results[i].backdrop_path + "'></a></li>"
+      // "<li><a href='../PAGINA 5/descripcion.html?id=" + series.results[i].id + "'><img src='https://image.tmdb.org/t/p/original" + series.results[i].backdrop_path + "'></a></li>"
 
 
 
-  // API DE OS FAVORITOS //
+    // API DE OS FAVORITOS //
 
-  //Paso 1: Leo Storage
+    //Paso 1: Leo Storage
 
-var recuperoStorage = localStorage.getItem("seriesFavoritas");
+  var recuperoStorage = localStorage.getItem("seriesFavoritas");
 
-// Si todavía no tenía gifs favoritos
-if (recuperoStorage == null) {
-  // Creo una lista vacia
-  seriesFavoritas = [];
-} else {
-  // Descomprimo el TEXTO que tenia en storage en el array que necesito trabajar
-  seriesFavoritas = JSON.parse(recuperoStorage);
-}
+  // Si todavía no tenía gifs favoritos
+  if (recuperoStorage == null) {
+    // Creo una lista vacia
+    seriesFavoritas = [];
+  } else {
+    // Descomprimo el TEXTO que tenia en storage en el array que necesito trabajar
+    seriesFavoritas = JSON.parse(recuperoStorage);
+  }
 
-var datos = new URLSearchParams(location.search);
-var idSerie = datos.get("idSerie");
+  var datos = new URLSearchParams(location.search);
+  var idSerie = datos.get("id");
 
-if (seriesFavoritas.includes(idSerie)) {
-  document.querySelector("#favoritos").innerHTML = "QUITAR DE FAVORITOS";
-}
-
-
-
-fetch("https://api.themoviedb.org/3/tv/" + seriesFavoritas + "?api_key=65eadee9d6749b2ab92f01099d10deeb&language=en-US&page=1")
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(serie) {
-    document.querySelector("h1").innerHTML = serie.data.title;
-    document.querySelector("img").src = serie.data.images.original.url;
-  })
-
-  document.querySelector("button").onclick = function() {
+  if (seriesFavoritas.includes(idSerie)) {
+    document.querySelector("#favoritos").innerHTML = "QUITAR DE FAVORITOS";
+  }
 
 
-    //Paso 2: Modificar la informacion
-    // Si el gif ya era favorito
-    if (seriesFavoritas.includes(idSerie)) {
-      // Lo quito
-      var index = seriesFavoritas.indexOf(idSerie);
-      seriesFavoritas.splice(index, 1);
-      document.querySelector("#favoritos").innerHTML = "AGREGAR FAVORITO";
-    } else {
-      //Lo agrego
-      seriesFavoritas.push(idSerie);
-      document.querySelector("#favoritos").innerHTML = "QUITAR DE FAVORITOS";
+    document.querySelector("#favoritos").onclick = function() {
+
+
+      //Paso 2: Modificar la informacion
+      // Si el gif ya era favorito
+      if (seriesFavoritas.includes(idSerie)) {
+        // Lo quito
+        var index = seriesFavoritas.indexOf(idSerie);
+        seriesFavoritas.splice(index, 1);
+        document.querySelector("#favoritos").innerHTML = "AGREGAR FAVORITO";
+      } else {
+        //Lo agrego
+        seriesFavoritas.push(idSerie);
+        document.querySelector("#favoritos").innerHTML = "QUITAR DE FAVORITOS";
+      }
+
+
+      //Paso 3: Escribir en storage
+      var infoParaStorage = JSON.stringify(seriesFavoritas);
+      localStorage.setItem("seriesFavoritas", infoParaStorage);
+      console.log(localStorage);
     }
 
-
-    //Paso 3: Escribir en storage
-    var infoParaStorage = JSON.stringify(seriesFavoritas);
-    localStorage.setItem("seriesFavoritas", infoParaStorage);
-    console.log(localStorage);
-  }
+}

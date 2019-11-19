@@ -231,6 +231,7 @@ display: flex;
 flex-wrap: wrap;
   margin: 0 auto;
   justify-content: center;
+  padding-top: 52px;
 
 }
 
@@ -246,6 +247,9 @@ width: 100%;
 
 }
 
+section.resultado img:hover{
+  border: 3px solid white;
+}
 
 
 /* -------- FOOTER --------- */
