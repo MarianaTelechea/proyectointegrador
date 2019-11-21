@@ -82,9 +82,9 @@ document.querySelector('.titulo').innerText = nombreDeGenero;
           var imagenSerie= arrayDeSeries[i].poster_path
           var li = ''
 
-          li += '<li>'
+          li += '<li class="uk-animation-toggle" tabindex="0" >'
           li += '<a href="../PAGINA 5/descripcion.html?id=' + id +'">'
-          li += '<img src=' + imgPath + imagenSerie + '>'
+          li += '<img class="uk-card uk-card-default uk-card-body uk-animation-fade" src=' + imgPath + imagenSerie + '>'
           li += '</a>'
           li += '</li>'
 

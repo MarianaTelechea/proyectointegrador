@@ -106,14 +106,18 @@ label {
 
 
 .titulo{
-  width: 17%;
-    height: 100%;
-    font-family: PN Sans Narrow;
+    font-family: "PT Sans Narrow";
     font-size: 52px;
-    background: white;
+    background: #ffae04b3;
     MARGIN: 0 AUTO;
     MARGIN-TOP: 7PX;
     MARGIN-BOTTOM: 7PX;
+    text-align: center;
+    color: ivory;
+    font-variant-caps: all-petite-caps;
+    -webkit-text-stroke: thin;
+    border: dotted;
+    margin: 5%;
 }
 
 /* LOS POSTERS */
@@ -137,13 +141,16 @@ section {
 #series-genero img{
     min-width: 100%;
     min-height: 100%;
+    padding: 0;
 }
 
 #series-genero img:hover{
-  border: 14px solid white;
-  mix-blend-mode: soft-light;
+  border: 14px solid #ffae04;
+  mix-blend-mode: luminosity;
 
 }
+
+
 
 
 /* -------- FOOTER --------- */

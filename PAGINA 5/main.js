@@ -138,7 +138,7 @@ fetch("https://api.themoviedb.org/3/tv/" + idTrailer + "/videos?api_key=65eadee9
   var idSerie = datos.get("id");
 
   if (seriesFavoritas.includes(idSerie)) {
-    document.querySelector("#favoritos").innerHTML = "QUITAR DE FAVORITOS";
+    document.querySelector("#favoritos").innerHTML = "Quitar de favoritos";
   }
 
 
@@ -151,11 +151,11 @@ fetch("https://api.themoviedb.org/3/tv/" + idTrailer + "/videos?api_key=65eadee9
         // Lo quito
         var index = seriesFavoritas.indexOf(idSerie);
         seriesFavoritas.splice(index, 1);
-        document.querySelector("#favoritos").innerHTML = "AGREGAR FAVORITO";
+        document.querySelector("#favoritos").innerHTML = "Agregar a favorito ♡";
       } else {
         //Lo agrego
         seriesFavoritas.push(idSerie);
-        document.querySelector("#favoritos").innerHTML = "QUITAR DE FAVORITOS";
+        document.querySelector("#favoritos").innerHTML = "Quitar de favoritos";
       }
 
 

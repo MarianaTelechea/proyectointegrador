@@ -105,7 +105,7 @@ form input.boton {
 .generos {
   margin-top: 15px;
   padding: 17%;
-  background-color: #000000;
+  background-color: #090c0fcc;
   position: relative;
   top: 1em;
 }
@@ -121,6 +121,7 @@ form input.boton {
   font-size: 64px;
   color: white;
   font-family: 'PT Sans Narrow';
+  border: dotted;
 }
 
 .generos ul{

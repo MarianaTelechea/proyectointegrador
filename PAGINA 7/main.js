@@ -20,7 +20,17 @@ window.onload = function() {
       })
       .then(function(serie) {
         console.log(serie);
-        document.querySelector("ul").innerHTML += "<li><h3><a href=detallegif.html?idGif=" + serie.id + ">" + serie.name + "</a></h3><img src=" + serie.backdrop_path + "></li>";
+        document.querySelector(".listado-favoritas").innerHTML += `
+            <li>
+              <h3>
+                <a href='../PAGINA 5/descripcion.html?id= ${serie.id}' > ${serie.name}</a>
+              </h3>
+                <a href='../PAGINA 5/descripcion.html?id= ${serie.id}' class="uk-animation-toggle" tabindex="0">
+                  <img class="uk-card uk-card-default uk-card-body uk-animation-fade" src='https://image.tmdb.org/t/p/original/${serie.poster_path}' onError="this.src='Error404.png'">
+                </a>
+            </a>
+            </li>
+            `
       })
   }
 }
