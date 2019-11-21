@@ -25,9 +25,3 @@ window.onload = function() {
 })
 
 }
-
-
-// "<li><a href='../PAGINA 3/lista-generos.html" + popu.genres[i].name' "</a></li>" ;
-
-
-// "<a href='../PAGINA 5/descripcion.html?id=" + popu.results[i].id + "'><img src='https://image.tmdb.org/t/p/original" + popu.results[i].backdrop_path + "'></a>";

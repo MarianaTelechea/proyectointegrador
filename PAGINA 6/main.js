@@ -9,9 +9,22 @@ window.onload = function() {
     console.log(campoBuscar);
     var generoBuscado = campoBuscar.options[campoBuscar.selectedIndex].value;
 
+    var campoExcluir = document.querySelector(".excluir");
+    console.log(generoExcluido);
+    var generoExcluido = campoExcluir.options[campoExcluir.selectedIndex].value;
+
+    var campoOrden = document.querySelector(".orden");
+    console.log(campoOrden);
+    var generoOrden = campoOrden.options[campoOrden.selectedIndex].value;
+
+    var campoAño = document.querySelector(".excluir");
+    console.log(campoAño);
+    var generoAño = campoAño.options[campoAño.selectedIndex].value;
+
+
     //document.querySelector("input").value
 
-    if (generoBuscado == "") {
+    if (generoBuscado == "" & generoExcluido == "" & campoOrden == ""  & campoAño == "" ) {
       e.preventDefault();
       UIkit.notification({
           message: 'my-message!',
