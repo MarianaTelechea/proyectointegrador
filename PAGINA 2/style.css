@@ -236,6 +236,7 @@ footer h3 {
 list-style: none;
 justify-content: center;
 margin: 27px;
+font-family: "PT Sans Narrow";
 }
 
 .ul-footer ul li{
@@ -272,4 +273,82 @@ margin-left: 32%;
 
 .nombres label {
   font-family: "PT Sans Narrow";
+}
+
+
+/* MEDIA QUERY */
+
+#menu-mobile{
+  display: none;
+}
+
+@media (min-width: 0px) and (max-width: 450px) {
+  #menu-mobile{
+    display: block;
+  }
+  body {
+      font-family: Questrial;
+      font-size: 1em;
+      width: 70vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+  }
+
+  #lostop5{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  }
+
+  .top-rated{
+  width: 100%
+  }
+
+  .watch-now{
+    width: 100%
+  }
+
+.ul-logo {
+padding: 0;
+}
+
+.li-logo a img{
+width: 33vh;
+}
+
+article.article-top5 a {
+width: 47vh;
+top: auto;
+left: 14%;
+position: relative;
+margin: 2%;
+border: solid 10px #F7C004;
+}
+
+#menu-mobile {
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#menu-desplegable {
+    background-color: transparent;
+    color: #333;
+    border-color: #F7C004;
+    border: 3px solid #F7C004;
+    width: 27%;
+    margin: 0 auto;
+    display: block;
+
+}
+
+.ul-menu{
+  display: none;
+}
+
+.noticias{
+  width: 100%;
+}
+
 }

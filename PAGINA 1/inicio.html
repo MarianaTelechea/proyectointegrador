@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="logo.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <div class="alert alert-light" uk-alert role="alert">
@@ -19,6 +20,19 @@
         </li>
       </ul>
     </nav>
+
+    <nav id="menu-mobile">
+    <button class="uk-button uk-button-default" id="menu-desplegable" type="button"> <span uk-icon="menu"></span> </button>
+    <div uk-dropdown>
+        <ul class="uk-nav uk-dropdown-nav">
+          <li class="li-menu"><a class="li-black" href="../PAGINA 1/inicio.html">Home</a></li>
+          <li class="li-menu"><a class="li-black" href="../PAGINA 2/generos.html"> Generos </a></li>
+          <li class="li-menu"><a class="li-black" href="../PAGINA 6/busc-avanzado.html">Buscador</a></li>
+          <li class="li-menu"><a class="li-black" href="#flex2">Mi Cuenta</a></li>
+        </ul>
+    </div>
+  </nav>
+
     <nav>
       <ul class="ul-menu">
         <li class="li-menu"><a class="li-black" href="../PAGINA 1/inicio.html">Home</a></li>
