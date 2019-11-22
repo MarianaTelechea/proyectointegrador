@@ -17,7 +17,7 @@ window.onload = function() {
     console.log(campoOrden);
     var generoOrden = campoOrden.options[campoOrden.selectedIndex].value;
 
-    var campoAño = document.querySelector(".excluir");
+    var campoAño = document.querySelector(".year");
     console.log(campoAño);
     var generoAño = campoAño.options[campoAño.selectedIndex].value;
 
@@ -154,8 +154,3 @@ var year = new URLSearchParams(location.search).get("year");
 
 
      }
-
-
-
-
-}
