@@ -1,39 +1,60 @@
 window.onload = function() {
 
-
-  document.querySelector(".busc").onsubmit = function(e) {
-
-
-
-    var campoBuscar = document.querySelector(".buscarCampo");
-    console.log(campoBuscar);
+    var campoBuscar = document.querySelector(".buscar-campo");
     var generoBuscado = campoBuscar.options[campoBuscar.selectedIndex].value;
+    console.log(campoBuscar);
+
 
     var campoExcluir = document.querySelector(".excluir");
-    console.log(generoExcluido);
     var generoExcluido = campoExcluir.options[campoExcluir.selectedIndex].value;
+    console.log(generoExcluido);
 
     var campoOrden = document.querySelector(".orden");
-    console.log(campoOrden);
     var generoOrden = campoOrden.options[campoOrden.selectedIndex].value;
+    console.log(campoOrden);
 
     var campoAño = document.querySelector(".year");
-    console.log(campoAño);
     var generoAño = campoAño.options[campoAño.selectedIndex].value;
+    console.log(campoAño);
 
 
-    document.querySelector("input").value
-
-    if (generoBuscado.length == " " & generoExcluido.length == " " & generoOrden.length == " " & generoAño.length == " " ) {
-      e.preventDefault();
-      UIkit.notification({
-          message: 'my-message!',
-          status: 'primary',
-          pos: 'top-right',
-          timeout: 5000
-      });
-
+    var botonEnviarBusqueda = document.querySelector("form.busc input[type='submit']");
+botonEnviarBusqueda.onclick = function(event) {
+  if (generoBuscado.length == "" && generoExcluido.length == "" && generoOrden.length == "" && generoAño.length == "" ) {
+    event.preventDefault();
+    alert("Hey! Hay que llenar aunque sea un campo")
+  } else {
+    document.querySelector('form.busc').submit();
+  }
 }
+
+
+
+
+
+
+
+
+// var clikedForm = document.querySelector(".busc") = function(e) {
+// e.preventDefault();
+//       if (clikedForm.find("[name='buscados']").val() == '') {
+//         alert('Enter Valid mobile number');
+//         return false;
+//       }
+//       if (clikedForm.find("[name='excluidos']").val() == '') {
+//         alert('Enter  valid email id');
+//         return false;
+//       }
+//       if (clikedForm.find("[name='order']").val() == '') {
+//         alert('Enter  valid email id');
+//         return false;
+//       }
+//       if (clikedForm.find("[name='year']").val() == '') {
+//         alert('Enter  valid email id');
+//         return false;
+//       }
+//
+// }
 
 
 
@@ -102,6 +123,3 @@ var year = new URLSearchParams(location.search).get("year");
 
 
        }}
-
-
-     }
