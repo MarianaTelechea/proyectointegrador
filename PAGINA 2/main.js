@@ -20,7 +20,7 @@ window.onload = function() {
 
        `
 
-              console.log(popu.genres[i].name);
+    console.log(popu.genres[i].name);
    }
 })
 
@@ -45,7 +45,7 @@ window.onload = function() {
 
    var recuperoStorage = localStorage.getItem("seriesFavoritas");
 
-   // Si todavía no tenía gifs favoritos
+   // Si todavía no tenía series favoritos
    if (recuperoStorage == null) {
      // Creo una lista vacia
      seriesFavoritas = [];
@@ -66,7 +66,7 @@ window.onload = function() {
 
 
        //Paso 2: Modificar la informacion
-       // Si el gif ya era favorito
+       // Si la series ya era favorito
        if (seriesFavoritas.includes(idSerie)) {
          // Lo quito
          var index = seriesFavoritas.indexOf(idSerie);

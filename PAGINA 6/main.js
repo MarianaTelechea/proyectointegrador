@@ -28,39 +28,6 @@ botonEnviarBusqueda.onclick = function(event) {
   }
 }
 
-
-
-
-
-
-
-
-// var clikedForm = document.querySelector(".busc") = function(e) {
-// e.preventDefault();
-//       if (clikedForm.find("[name='buscados']").val() == '') {
-//         alert('Enter Valid mobile number');
-//         return false;
-//       }
-//       if (clikedForm.find("[name='excluidos']").val() == '') {
-//         alert('Enter  valid email id');
-//         return false;
-//       }
-//       if (clikedForm.find("[name='order']").val() == '') {
-//         alert('Enter  valid email id');
-//         return false;
-//       }
-//       if (clikedForm.find("[name='year']").val() == '') {
-//         alert('Enter  valid email id');
-//         return false;
-//       }
-//
-// }
-
-
-
-
-
-
     }
 
 

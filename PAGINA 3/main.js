@@ -68,7 +68,7 @@ document.querySelector('.titulo').innerText = nombreDeGenero;
 
          var recuperoStorage = localStorage.getItem("seriesFavoritas");
 
-         // Si todavía no tenía gifs favoritos
+         // Si todavía no tenía series favoritos
          if (recuperoStorage == null) {
            // Creo una lista vacia
            seriesFavoritas = [];
@@ -89,7 +89,7 @@ document.querySelector('.titulo').innerText = nombreDeGenero;
 
 
              //Paso 2: Modificar la informacion
-             // Si el gif ya era favorito
+             // Si el series ya era favorito
              if (seriesFavoritas.includes(idSerie)) {
                // Lo quito
                var index = seriesFavoritas.indexOf(idSerie);

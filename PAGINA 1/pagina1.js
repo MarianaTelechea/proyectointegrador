@@ -17,17 +17,6 @@ window.onload = function() {
       for(var i = 0; i < popu.results.length; i++) {
        contenedorCarousel.innerHTML += "<a href='../PAGINA 5/descripcion.html?id=" + popu.results[i].id + "'><img src='https://image.tmdb.org/t/p/original" + popu.results[i].backdrop_path + "'></a>";
 
-        //contenedorCarousel.innerHTML += `
-        //   <li class="uk-width-3-4">
-        //     <div class="uk-cover-container">
-        //       <a href="../PAGINA 5/descripcion.html?id=${popu.results[i].id}">
-        //       <img src="https://image.tmdb.org/t/p/original/${popu.results[i].poster_path}" uk-cover >
-        //       </a>
-        //     </div>
-        //   </li>
-        // `;
-
-
       }
     })
 
@@ -49,7 +38,6 @@ window.onload = function() {
         for(var i = 0; i < 5; i++) {
           losMejoresCinco.innerHTML += "<a href='../PAGINA 5/descripcion.html?id=" + popu.results[i].id + "'><img src='https://image.tmdb.org/t/p/original" + popu.results[i].poster_path + "'></a>";
 
-        /*  losMejoresCinco.innerHTML += "<h2>" + popu.results[i].name + "</h2>"; */
         }
 
       })
@@ -113,7 +101,7 @@ window.onload = function() {
 
        var recuperoStorage = localStorage.getItem("seriesFavoritas");
 
-       // Si todavía no tenía gifs favoritos
+       // Si todavía no tenía series favoritos
        if (recuperoStorage == null) {
          // Creo una lista vacia
          seriesFavoritas = [];
@@ -134,7 +122,7 @@ window.onload = function() {
 
 
            //Paso 2: Modificar la informacion
-           // Si el gif ya era favorito
+           // Si la serie ya era favorito
            if (seriesFavoritas.includes(idSerie)) {
              // Lo quito
              var index = seriesFavoritas.indexOf(idSerie);
@@ -154,7 +142,7 @@ window.onload = function() {
          }
 
 
-  
+
 
 
 
