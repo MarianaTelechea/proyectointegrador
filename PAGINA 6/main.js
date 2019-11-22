@@ -22,18 +22,35 @@ window.onload = function() {
     var generoAño = campoAño.options[campoAño.selectedIndex].value;
 
 
-    //document.querySelector("input").value
+    document.querySelector("input").value
 
-    if (generoBuscado == "" & generoExcluido == "" & campoOrden == ""  & campoAño == "" ) {
-      e.preventDefault();
-      UIkit.notification({
-          message: 'my-message!',
-          status: 'primary',
-          pos: 'top-right',
-          timeout: 5000
-      });
+    // if (generoBuscado.length == 0 & generoExcluido.length == o & generoOrden.length == 0 & generoAño.length == 0 ) {
+    //   e.preventDefault();
+    //   UIkit.notification({
+    //       message: 'my-message!',
+    //       status: 'primary',
+    //       pos: 'top-right',
+    //       timeout: 5000
+    //   });
+
+      document.querySelector(".busc").onsubmit = function(e) {
+       var buscadorInput = document.querySelector(".resultado")
+       if (generoBuscado.length == 0 & generoExcluido.length == 0 & generoOrden.length == 0 & generoAño.length == 0) {
+         e.preventDefault()
+         UIkit.notification({
+               message: 'my-message!',
+               status: 'primary',
+               pos: 'top-right',
+               timeout: 5000
+           });
+
+
+       }}
+
+
+
     }
-  }
+
 
 // API PARA LOS GENEROS //
 
@@ -49,14 +66,6 @@ window.onload = function() {
        document.querySelector("#excludeGenre").innerHTML += "<option value='"+data.genres[i].id+"'>" + data.genres[i].name + "</option>";
     }
   })
-
-// API PARA LOS AÑOS //
-
-
-
-
-
-
 
 
 // API PARA TODO //
@@ -87,20 +96,24 @@ var year = new URLSearchParams(location.search).get("year");
     }
   })
 
+
+
+  // BOTON DE BÚSQUEDA //
+
+      document.querySelector(".buscador").onsubmit = function(e) {
+       var buscadorInput = document.querySelector(".buscador-simple")
+       if (buscadorInput.value.length < 3) {
+         e.preventDefault()
+         document.querySelector(".alert-light").style.display = "block"
+         setTimeout(function() {
+           document.querySelector(".alert-light").style.display = "none"
+         },3000)
+
+
+       }}
+
+
+
+
+
 }
-
-
-// var url = "https://api.themoviedb.org/3/discover/tv?api_key=65eadee9d6749b2ab92f01099d10deeb&language=en-US"
-//   if (orden != "" || excluidos != "")
-//
-//     url+= "&orden = " + orden
-//
-// }
-
-
-
-// var titulo = document.querySelector(".titulo-busqueda");
-// titulo.innerText += resultado;
- // var contenedorSeries = document.querySelector(".resultado-series");
- // for(var i = 0; i < data.results.length; i++) {
-//  contenedorSeries.innerHTML += "<li><a href='../PAGINA 5/descripcion.html?id=" + data.results[i].id+ "'>" + data.results[i].name + "</a></li>"

@@ -122,6 +122,22 @@ form input.boton {
   right: 3em;
 }
 
+/* ALERTA */
+
+div.alert-light{
+ background-color: #ffae04;
+ border: 2px solid black;
+ text-align: center;
+ font-weight: bolder;
+ color: black;
+ padding: 0;
+ font-family: "PT Sans Narrow"
+}
+
+div.alert-light{
+ display: none;
+}
+
 
 /* BUSCADOR DE SERIES FAV */
 
@@ -187,6 +203,9 @@ ul.listado-favoritas li{
   border: 14px solid #ffae04;
   mix-blend-mode: luminosity;
 }
+
+
+
 
 
 /* -------- FOOTER --------- */

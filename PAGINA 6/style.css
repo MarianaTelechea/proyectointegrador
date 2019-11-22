@@ -35,6 +35,22 @@ form input.boton {
     right: 3em;
 }
 
+/* ALERTA */
+
+div.alert-light{
+ background-color: #ffae04;
+ border: 2px solid black;
+ text-align: center;
+ font-weight: bolder;
+ color: black;
+ font-family: "PT Sans Narrow"
+}
+
+div.alert-light{
+ display: none;
+}
+
+
 /* -------- NAVEGADOR -------- */
 
 
@@ -123,6 +139,7 @@ form input.boton {
   width: 10%;
   position: relative;
   left: -2em;
+  list-style-type: none;
 }
 
 div.avanzado label{

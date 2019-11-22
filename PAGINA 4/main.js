@@ -22,27 +22,46 @@ window.onload = function() {
         `
       }
 
-      // capturo el boton
-      document.querySelector("BOTON").addEventListener('click', function(event){
-        // al boton le agrego el evento para que cuando lo clickee, ejecute una funcion que tenga el codigo que esta debajo
-        var buscadorInput = document.querySelector("input.buscador-simple")
-        console.log(buscadorInput);
-        if (buscadorInput.value.length < 3) {
-          console.log("entro al if");
-          event.preventDefault()
-          document.querySelector(".alert-light").style.display = "block"
-          setTimeout(function() {
-            document.querySelector(".alert-light").style.display = "none"
-          },3000)
 
 
-        }
+// BOTON DE BÚSQUEDA //
 
-      })
+document.querySelector(".buscador").onsubmit = function(e) {
+ var buscadorInput = document.querySelector(".buscador-simple")
+ if (buscadorInput.value.length < 3) {
+   e.preventDefault()
+   document.querySelector(".alert-light").style.display = "block"
+   setTimeout(function() {
+     document.querySelector(".alert-light").style.display = "none"
+   },3000)
+
+
+ }}
+
 
   })
   .catch(function(error) {
         console.log("Error: " + error);
 
   })
+
+
+  // BOTON DE BÚSQUEDA //
+
+
+  var recuperoStorage = localStorage.getItem(".resultado-series");
+
+  // Si todavía no tenía gifs favoritos
+  if (recuperoStorage == null) {
+
+    document.querySelector(".error").innerHTML = "<img src='erorbusc.png'>"
+    document.querySelector(".error").style.backgroundColor = "rgb(160, 152, 133)"
+  }
+
+
+
+
+
+
+
 }

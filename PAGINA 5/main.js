@@ -12,7 +12,7 @@ window.onload = function() {
 
 // API DE LOS POSTERS DE LAS SERIES //
 
-    fetch("https://api.themoviedb.org/3/tv/" + idSerie + "?api_key=65eadee9d6749b2ab92f01099d10deeb&language=es-ARG")
+    fetch("https://api.themoviedb.org/3/tv/" + idSerie + "?api_key=65eadee9d6749b2ab92f01099d10deeb&language=en-US")
     .then(function(respuesta) {
         return respuesta.json()
       })
@@ -41,7 +41,7 @@ window.onload = function() {
 
 
         for (var i=0; i < arrayDeGeneros.length; i++){
-              li += '<a href="../PAGINA 3/lista-generos.html?id=' + arrayDeGeneros[i].id + '">'
+              li += '<a href="../PAGINA 3/lista-generos.html?id=' + arrayDeGeneros[i].id + '&nombreDeGenero= ' + arrayDeGeneros[i].name + '">'
               li += arrayDeGeneros[i].name
 
               if (i < arrayDeGeneros) {
@@ -83,7 +83,8 @@ fetch("https://api.themoviedb.org/3/tv/" + idTrailer + "/videos?api_key=65eadee9
   .then(function(video) {
     console.log(video.results[0].key);
     var KEY = video.results[0].key;
-    document.querySelector("#video").src += KEY;
+      document.querySelector("#video").src += KEY
+
   })
 
   // API DE LAS recomendaciones
@@ -114,8 +115,6 @@ fetch("https://api.themoviedb.org/3/tv/" + idTrailer + "/videos?api_key=65eadee9
 
                }
           })
-
-      // "<li><a href='../PAGINA 5/descripcion.html?id=" + series.results[i].id + "'><img src='https://image.tmdb.org/t/p/original" + series.results[i].backdrop_path + "'></a></li>"
 
 
 
@@ -164,5 +163,23 @@ fetch("https://api.themoviedb.org/3/tv/" + idTrailer + "/videos?api_key=65eadee9
       localStorage.setItem("seriesFavoritas", infoParaStorage);
       console.log(localStorage);
     }
+
+
+    // BOTON DE BÚSQUEDA //
+
+        document.querySelector(".buscador").onsubmit = function(e) {
+         var buscadorInput = document.querySelector(".buscador-simple")
+         if (buscadorInput.value.length < 3) {
+           e.preventDefault()
+           document.querySelector(".alert-light").style.display = "block"
+           setTimeout(function() {
+             document.querySelector(".alert-light").style.display = "none"
+           },3000)
+
+
+         }}
+
+
+
 
 }

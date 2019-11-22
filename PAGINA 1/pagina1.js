@@ -32,7 +32,8 @@ window.onload = function() {
     })
 
 
-    // TOP 5 //
+// TOP 5 //
+
 
     var api_key = "65eadee9d6749b2ab92f01099d10deeb"
     var urlPopulares = "https://api.themoviedb.org/3/tv/popular?api_key="+api_key+"&language=en-US&page=1"
@@ -53,7 +54,7 @@ window.onload = function() {
 
       })
 
-      // TOP RATED //
+// TOP RATED //
 
       var api_key = "65eadee9d6749b2ab92f01099d10deeb"
       var urlPopulares = "https://api.themoviedb.org/3/tv/top_rated?api_key="+api_key+"&language=en-US&page=1"
@@ -71,11 +72,7 @@ window.onload = function() {
 
         })
 
-
-
-
-
-  // SECCION: WATCH NOW //
+// SECCION: WATCH NOW //
 
   var api_key = "65eadee9d6749b2ab92f01099d10deeb"
   var urlPopulares = "https://api.themoviedb.org/3/tv/airing_today?api_key=" + api_key + "&language=en-US&page=1"
@@ -94,4 +91,23 @@ window.onload = function() {
       contenedorCarousel.innerHTML += "<a href='../PAGINA 5/descripcion.html?id=" + now.results[i].id + "'><img src='https://image.tmdb.org/t/p/original" + laImagen + "'></a>";
       }
     })
+
+    // BOTON DE BÚSQUEDA //
+
+        document.querySelector(".buscador").onsubmit = function(e) {
+         var buscadorInput = document.querySelector(".buscador-simple")
+         if (buscadorInput.value.length < 3) {
+           e.preventDefault()
+           document.querySelector(".alert-light").style.display = "block"
+           setTimeout(function() {
+             document.querySelector(".alert-light").style.display = "none"
+           },3000)
+
+
+         }}
+
+
+        
+
+
 }

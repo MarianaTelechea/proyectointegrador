@@ -26,7 +26,7 @@ form.buscador input.texto{
 top: -11em;
 right: 3em;
 text-align: center;
-font-family: PT Sans Narrow;
+font-family: "PT Sans Narrow";
 }
 
 form input.boton {
@@ -75,7 +75,7 @@ form input.boton {
 .li-menu {
   list-style-type: none;
   font-size: 31px;
-  font-family: PT Sans Narrow;
+  font-family: "PT Sans Narrow";
 }
 
 .li-menu a {
@@ -121,7 +121,7 @@ label {
 .titulo-busqueda {
   position: absolute;
 top: 1em;
-font-family: PT Sans Narrow;
+font-family: "PT Sans Narrow";
 font-size: 3em;
 width: fit-content;
 background-color: white;
@@ -140,7 +140,7 @@ color: #525252;
 .resultado-series {
   position: relative;
     top: 5em;
-    font-family: PT Sans Narrow;
+    font-family: "PT Sans Narrow";
     font-size: 2em;
     list-style-type: none;
     display: flex;
@@ -156,8 +156,7 @@ display: flex;
 }
 
 .resultado-series img:hover {
-border: 3px solid white;
-border: 14px solid white;
+    border: 14px solid white;
     mix-blend-mode: soft-light;
 }
 
@@ -175,6 +174,26 @@ border: 14px solid white;
     font-size: 40px;
 }
 
+ /* ALERTA */
+
+div.alert-light{
+  background-color: #ffae04;
+  border: 2px solid black;
+  text-align: center;
+  font-weight: bolder;
+  color: black;
+  font-family: "PT Sans Narrow"
+}
+
+div.alert-light{
+  display: none;
+}
+
+/* ERROR 404 */
+
+.error{
+  text-align: center;
+}
 
 
 /* -------- FOOTER --------- */
@@ -195,7 +214,7 @@ footer img {
 }
 
 footer h3 {
-  font-family: PT Sans Narrow;
+  font-family: "PT Sans Narrow";
   text-align: center;
 }
 

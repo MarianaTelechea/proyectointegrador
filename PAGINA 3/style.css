@@ -100,6 +100,22 @@ label {
   text-align: center;
   font-weight: bold;
 }
+
+/* ALERTA */
+
+div.alert-light{
+ background-color: #ffae04;
+ border: 2px solid black;
+ text-align: center;
+ font-weight: bolder;
+ color: black;
+ font-family: "PT Sans Narrow"
+}
+
+div.alert-light{
+ display: none;
+}
+
 /* -------- GENEROS --------- */
 
 /* TITULO DEL GENEROS */

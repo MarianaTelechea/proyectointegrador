@@ -48,6 +48,19 @@ document.querySelector('.titulo').innerText = nombreDeGenero;
       })
 
 
+      // BOTON DE BÚSQUEDA //
+
+          document.querySelector(".buscador").onsubmit = function(e) {
+           var buscadorInput = document.querySelector(".buscador-simple")
+           if (buscadorInput.value.length < 3) {
+             e.preventDefault()
+             document.querySelector(".alert-light").style.display = "block"
+             setTimeout(function() {
+               document.querySelector(".alert-light").style.display = "none"
+             },3000)
+
+
+           }}
 
 
 })

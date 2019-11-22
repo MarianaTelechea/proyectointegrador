@@ -5,9 +5,13 @@
   <title>Movfly</title>
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="logo.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
   <script src="main.js" charset="utf-8"></script>
 </head>
   <body>
+    <div class="alert alert-light" uk-alert role="alert">
+    ¡MÍNIMO 3 CARACTERES!
+    </div>
     <header id="header">
       <nav class="barra-navegacion">
         <ul class="ul-logo">
@@ -18,15 +22,15 @@
       </nav>
       <nav>
         <ul class="ul-menu">
-          <li class="li-menu"><a class="li-black" href="../PAGINA 7/seriesFav.html">Favoritos</a></li>
-          <li class="li-menu"><a class="li-black" href="../PAGINA 2/generos.html">Géneros</a></li>
+          <li class="li-menu"><a class="li-black" href="../PAGINA 1/inicio.html">Home</a></li>
+        <li class="li-menu"><a class="li-black" href="../PAGINA 2/generos.html">Géneros</a></li>
           <li class="li-menu"><a class="li-black" href="../PAGINA 6/busc-avanzado.html">Buscador</a></li>
-          <li class="li-menu"><a class="li-black" href="#flex2">Mi Cuenta</a></li>
+            <li class="li-menu"><a class="li-black" href="../PAGINA 7/seriesFav.html">Favoritos</a></li>
         </ul>
       </nav>
       <div class="elbuscador">
         <form class="buscador" action="../PAGINA 4/buscado.html" method="get">
-            <input type="text" name="buscador" value="" class="texto">
+            <input type="text" name="buscador" value="" class="buscador-simple texto">
             <input type=image src="buscador.png" width="17" name="" value="Buscar" class="boton">
         </form>
       </div>
@@ -56,6 +60,7 @@
                 <label for="name" class="orden">
                   ÓRDEN DE LOS RESULTADOS
                   <select class="orden" name="orden">
+                    <option value="nothing"></option>
                     <option value="vote_average.desc">Puntuación descendente</option>
                     <option value="vote_average.asc">Puntuación ascendente </option>
                     <option value="first_air_date.desc">Fecha de estreno descendente</option>
@@ -66,7 +71,7 @@
                 </label>
                 <label for="name" class="año">
                   AÑO DE ESTRENO
-                  <input type="number" min="1900" max="2020"  class="year" name="year" id="year">
+                  <input type="number" min="1900" max="2020"  class="year" name="year" id="year" value="">
 
                 </input>
                 </label>
@@ -130,5 +135,7 @@
 
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
   </body>
 </html>

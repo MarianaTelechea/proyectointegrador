@@ -99,6 +99,22 @@ label {
   text-align: center;
   font-weight: bold;
 }
+
+/* ALERTA */
+
+div.alert-light{
+ background-color: #ffae04;
+ border: 2px solid black;
+ text-align: center;
+ font-weight: bolder;
+ color: black;
+ font-family: "PT Sans Narrow"
+}
+
+div.alert-light{
+ display: none;
+}
+
 /* -------- SERIES --------- */
 .series {
   margin-top: 15px;
@@ -314,12 +330,12 @@ align-items: center;
 
 
 #recomendaciones li a img:hover{
-border: 3px solid white;
-opacity: 50%;
+  border: 14px solid white;
+  mix-blend-mode: luminosity;
 }
 
 .uk-modal-dialog {
-  background: #f1a85e;
+  background: #252827;;
 }
 
 
