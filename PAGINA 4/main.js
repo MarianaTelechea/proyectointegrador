@@ -15,7 +15,7 @@ window.onload = function() {
 
       contenedorSeries.innerHTML +=`
       <li>
-      <a href='../PAGINA 5/descripcion.html?id= ${data.results[i].id}' >
+      <a href='../PAGINA 5/descripcion.html?id=${data.results[i].id}' >
         <img src='https://image.tmdb.org/t/p/original/${data.results[i].poster_path}' onError="this.src='Error404.png'">
         </a>
         </li>
