@@ -17,11 +17,16 @@ body {
   flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
+  align-items: center;
+    margin-top: -7%;
 }
 
 .logo {
   width: 53%;
-  padding: 4%;
+  padding-left: 4%;
+  padding-top: 4%;
+  padding-right: 4%;
+  padding-bottom: 0;
 }
 
 .botones {
@@ -56,4 +61,22 @@ body {
   font-size: 19px;
   text-decoration: none;
   text-align: center;
+}
+
+h2{
+  font-family: "PT Sans Narrow";
+  margin: 0 auto;
+  color: white;
+  font-size: 20px;
+}
+
+h3{
+  font-family: "PT Sans Narrow";
+  margin: 0 auto;
+  color: white;
+  font-size: 75px;
+}
+
+a:hover{
+  background: black;
 }
