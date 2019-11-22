@@ -76,16 +76,19 @@ form input.boton {
   list-style-type: none;
   font-size: 31px;
   font-family: "PT Sans Narrow";
+
 }
 
 .li-menu a {
   text-decoration: none;
   color: black;
+
 }
 
 .li-menu a:hover {
   color: #ffac03;
   font-size: 1.3em;
+  text-decoration: none;
 }
 
 label:hover {

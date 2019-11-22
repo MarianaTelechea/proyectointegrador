@@ -92,16 +92,19 @@ div.alert-light{
   list-style-type: none;
   font-size: 31px;
   font-family: "PT Sans Narrow";
+
 }
 
 .li-menu a {
   text-decoration: none;
   color: black;
+  text-decoration: none;
 }
 
 .li-menu a:hover {
   color: #ffac03;
   font-size: 1.3em;
+  text-decoration: none;
 
 }
 
