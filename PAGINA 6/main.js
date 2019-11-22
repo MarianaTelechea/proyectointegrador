@@ -24,28 +24,19 @@ window.onload = function() {
 
     document.querySelector("input").value
 
-    // if (generoBuscado.length == 0 & generoExcluido.length == o & generoOrden.length == 0 & generoAño.length == 0 ) {
-    //   e.preventDefault();
-    //   UIkit.notification({
-    //       message: 'my-message!',
-    //       status: 'primary',
-    //       pos: 'top-right',
-    //       timeout: 5000
-    //   });
+    if (generoBuscado.length == 0 & generoExcluido.length == 0 & generoOrden.length == 0 & generoAño.length == 0 ) {
+      e.preventDefault();
+      UIkit.notification({
+          message: 'my-message!',
+          status: 'primary',
+          pos: 'top-right',
+          timeout: 5000
+      });
 
-      document.querySelector(".busc").onsubmit = function(e) {
-       var buscadorInput = document.querySelector(".resultado")
-       if (generoBuscado.length == 0 & generoExcluido.length == 0 & generoOrden.length == 0 & generoAño.length == 0) {
-         e.preventDefault()
-         UIkit.notification({
-               message: 'my-message!',
-               status: 'primary',
-               pos: 'top-right',
-               timeout: 5000
-           });
+}
 
 
-       }}
+
 
 
 
@@ -87,7 +78,7 @@ var year = new URLSearchParams(location.search).get("year");
     for (var i = 0; i < 10; i++) {
       contenedorSeries.innerHTML +=`
       <li>
-      <a href='../PAGINA 5/descripcion.html?id= ${data.results[i].name}' >
+      <a href='../PAGINA 5/descripcion.html?id= ${data.results[i].id}' >
         <img src='https://image.tmdb.org/t/p/original/${data.results[i].poster_path}' onError="this.src='Error404.png'">
         </a>
         </li>
@@ -112,6 +103,57 @@ var year = new URLSearchParams(location.search).get("year");
 
        }}
 
+       // API DE OS FAVORITOS //
+
+       //Paso 1: Leo Storage
+
+     var recuperoStorage = localStorage.getItem("seriesFavoritas");
+
+     // Si todavía no tenía gifs favoritos
+     if (recuperoStorage == null) {
+       // Creo una lista vacia
+       seriesFavoritas = [];
+     } else {
+       // Descomprimo el TEXTO que tenia en storage en el array que necesito trabajar
+       seriesFavoritas = JSON.parse(recuperoStorage);
+     }
+
+     var datos = new URLSearchParams(location.search);
+     var idSerie = datos.get("id");
+
+     if (seriesFavoritas.includes(idSerie)) {
+       document.querySelector("#favoritos").innerHTML = "Quitar de favoritos";
+     }
+
+
+       document.querySelector("#favoritos").onclick = function() {
+
+
+         //Paso 2: Modificar la informacion
+         // Si el gif ya era favorito
+         if (seriesFavoritas.includes(idSerie)) {
+           // Lo quito
+           var index = seriesFavoritas.indexOf(idSerie);
+           seriesFavoritas.splice(index, 1);
+           document.querySelector("#favoritos").innerHTML = "Agregar a favorito ♡";
+         } else {
+           //Lo agrego
+           seriesFavoritas.push(idSerie);
+           document.querySelector("#favoritos").innerHTML = "Quitar de favoritos";
+         }
+
+
+         //Paso 3: Escribir en storage
+         var infoParaStorage = JSON.stringify(seriesFavoritas);
+         localStorage.setItem("seriesFavoritas", infoParaStorage);
+         console.log(localStorage);
+       }
+
+
+
+
+
+     }
 
 
 

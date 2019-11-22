@@ -118,13 +118,13 @@ fetch("https://api.themoviedb.org/3/tv/" + idTrailer + "/videos?api_key=65eadee9
 
 
 
-    // API DE OS FAVORITOS //
+    // API DE LOS FAVORITOS //
 
     //Paso 1: Leo Storage
 
   var recuperoStorage = localStorage.getItem("seriesFavoritas");
 
-  // Si todavía no tenía gifs favoritos
+  // Si todavía no tenía series favoritos
   if (recuperoStorage == null) {
     // Creo una lista vacia
     seriesFavoritas = [];
@@ -145,7 +145,7 @@ fetch("https://api.themoviedb.org/3/tv/" + idTrailer + "/videos?api_key=65eadee9
 
 
       //Paso 2: Modificar la informacion
-      // Si el gif ya era favorito
+      // Si la series ya era favorito
       if (seriesFavoritas.includes(idSerie)) {
         // Lo quito
         var index = seriesFavoritas.indexOf(idSerie);
