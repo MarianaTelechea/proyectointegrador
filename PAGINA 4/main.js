@@ -49,10 +49,10 @@ document.querySelector(".buscador").onsubmit = function(e) {
   // BOTON DE BÚSQUEDA //
 
 
-  var recuperoStorage = localStorage.getItem(".resultado-series");
+  var recuperoStorage = localStorage.getItem(".resultado-series li");
 
-  // Si todavía no tenía gifs favoritos
-  if (recuperoStorage == null) {
+
+  if (recuperoStorage == "") {
 
     document.querySelector(".error").innerHTML = "<img src='erorbusc.png'>"
     document.querySelector(".error").style.backgroundColor = "rgb(160, 152, 133)"
